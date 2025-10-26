@@ -8,11 +8,7 @@ function solution(letter) {
     };
     const letterArr = letter.split(' ');
     const message = letterArr.reduce((acc,el)=>{
-        for(morseLetter in morse){
-            if(morseLetter === el){
-                acc+= morse[morseLetter]
-            }
-        }
+        acc+=morse[el]
         return acc
     },'')
     return message
